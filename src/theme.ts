@@ -1,4 +1,4 @@
-import { createTheme, alpha } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface PaletteColor {
@@ -47,6 +47,12 @@ declare module "@mui/material/styles" {
   }
 }
 
+declare module "@mui/material/Button" {
+  interface ButtonPropsVariantOverrides {
+    gradient: true;
+  }
+}
+
 let theme = createTheme({
   breakpoints: {
     values: {
@@ -58,25 +64,19 @@ let theme = createTheme({
     },
   },
   palette: {
-    blue: {
-      dark: "#13183F",
-      main: "#666CA3",
-      light: "#F0F1FF",
+    primary: {
+      main: "#4851FF",
+      light: "#F02AA6",
     },
-    pink: {
-      main: "#F74780",
-      light: "#FFA7C3",
+    secondary: {
+      main: "#FF6F48",
+      dark: "#F02AA6",
     },
     grey: {
       500: "#83869A",
     },
-    orange: {
-      main: "#FF6F48",
-      dark: "#F02AA6",
-    },
-    purple: {
-      main: "#4851FF",
-      light: "#F02AA6",
+    background: {
+      default: `linear-gradient(to bottom, #FFFFFF, #F0F1FF)`,
     },
   },
   typography: {
@@ -87,26 +87,6 @@ let theme = createTheme({
 });
 
 theme = createTheme(theme, {
-  palette: {
-    text: {
-      primary: theme.palette.grey[500],
-    },
-    background: {
-      default: `linear-gradient(to bottom, ${theme.palette.common.white}, ${theme.palette.blue.light})`,
-    },
-    gradientPink: {
-      main: `linear-gradient(to bottom, ${theme.palette.orange.main}, ${theme.palette.orange.dark})`,
-      light: `linear-gradient(to bottom, ${theme.palette.orange.main}, ${
-        theme.palette.orange.dark
-      }), ${alpha(theme.palette.common.white, 0.5)}`,
-    },
-    gradientPurple: {
-      main: `linear-gradient(to bottom, ${theme.palette.purple.main}, ${theme.palette.purple.light})`,
-      light: `linear-gradient(to bottom, ${theme.palette.purple.main}, ${
-        theme.palette.purple.light
-      }), ${alpha(theme.palette.common.white, 0.5)}`,
-    },
-  },
   typography: {
     h1: {
       fontSize: "3.5rem",
