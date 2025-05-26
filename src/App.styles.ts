@@ -11,6 +11,7 @@ export const styles: StyleProps = {
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
+    maxWidth: "23.4375rem",
   },
 };
 

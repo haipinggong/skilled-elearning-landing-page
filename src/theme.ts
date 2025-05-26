@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+// import { alpha } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface PaletteColor {
@@ -64,20 +65,26 @@ let theme = createTheme({
     },
   },
   palette: {
-    primary: {
-      main: "#4851FF",
-      light: "#F02AA6",
+    blue: {
+      dark: "#13183F",
+      main: "#666CA3",
+      light: "#F0F1FF",
     },
-    secondary: {
-      main: "#FF6F48",
-      dark: "#F02AA6",
-    },
-    grey: {
-      500: "#83869A",
-    },
-    background: {
-      default: `linear-gradient(to bottom, #FFFFFF, #F0F1FF)`,
-    },
+    // pink: {
+    //   main: "#F74780",
+    //   light: "#FFA7C3",
+    // },
+    // grey: {
+    //   500: "#83869A",
+    // },
+    // orange: {
+    //   main: "#FF6F48",
+    //   dark: "#F02AA6",
+    // },
+    // purple: {
+    //   main: "#4851FF",
+    //   light: "#F02AA6",
+    // },
   },
   typography: {
     fontFamily: "Plus Jakarta Sans, sans-serif",
@@ -87,6 +94,53 @@ let theme = createTheme({
 });
 
 theme = createTheme(theme, {
+  palette: {
+    // primary: {
+    //   contrastText: theme.palette.common.white,
+    // },
+    // text: {
+    //   primary: theme.palette.grey[500],
+    // },
+    background: {
+      default: theme.palette.common.white,
+    },
+    // gradientPink: {
+    //   main: `linear-gradient(to bottom, ${theme.palette.orange.main}, ${theme.palette.orange.dark})`,
+    //   light: `linear-gradient(to bottom, ${theme.palette.orange.main}, ${
+    //     theme.palette.orange.dark
+    //   }), ${alpha(theme.palette.common.white, 0.5)}`,
+    // },
+    // gradientPurple: {
+    //   main: `linear-gradient(to bottom, ${theme.palette.purple.main}, ${theme.palette.purple.light})`,
+    //   light: `linear-gradient(to bottom, ${theme.palette.purple.main}, ${
+    //     theme.palette.purple.light
+    //   }), ${alpha(theme.palette.common.white, 0.5)}`,
+    // },
+  },
+  // components: {
+  //   MuiButton: {
+  //     styleOverrides: {
+  //       root: {
+  //         textTransform: "none",
+  //         borderRadius: "28px",
+  //         padding: "14px 32px",
+  //         fontWeight: theme.typography.fontWeightBold,
+  //       },
+  //     },
+  //     variants: [
+  //       {
+  //         props: { variant: "gradient" },
+  //         style: {
+  //           background: theme.palette.common.black,
+  //           color: theme.palette.common.white,
+  //           "&:hover": {
+  //             background: theme.palette.common.black,
+  //           },
+  //         },
+  //       },
+  //     ],
+  //   },
+  // },
   typography: {
     h1: {
       fontSize: "3.5rem",
