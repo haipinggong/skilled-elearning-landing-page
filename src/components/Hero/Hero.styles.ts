@@ -5,17 +5,22 @@ interface StyleProps {
 }
 
 export const styles: StyleProps = {
-  wrapper: {
+  wrapper: (theme) => ({
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    maxWidth: "23.4375rem",
+    padding: theme.spacing(8, 2.5),
+  }),
+  contentWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    padding: 0,
+    gap: 6,
   },
-  main: {
+  content: {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
+    padding: 0,
+    gap: 5,
   },
 };
 
