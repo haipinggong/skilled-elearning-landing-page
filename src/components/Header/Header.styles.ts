@@ -13,7 +13,7 @@ export const styles: StyleProps = {
     justifyContent: "space-between",
   }),
   button: (theme) => ({
-    borderRadius: 25,
+    borderRadius: 28,
     fontWeight: theme.typography.fontWeightMedium,
     padding: theme.spacing(2, 4),
     backgroundColor: theme.palette.blue.dark,

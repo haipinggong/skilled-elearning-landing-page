@@ -5,23 +5,31 @@ interface StyleProps {
 }
 
 export const styles: StyleProps = {
-  wrapper: (theme) => ({
-    display: "flex",
-    flexDirection: "column",
-    padding: theme.spacing(8, 2.5),
-  }),
-  contentWrapper: {
+  contentWrapper: (theme) => ({
     display: "flex",
     flexDirection: "column",
     padding: 0,
     gap: 6,
-  },
+    margin: theme.spacing(8, 2.5),
+  }),
   content: {
     display: "flex",
     flexDirection: "column",
     padding: 0,
     gap: 5,
+    alignItems: "start",
   },
+  description: (theme) => ({
+    color: theme.palette.grey[500],
+  }),
+  button: (theme) => ({
+    fontWeight: theme.typography.fontWeightBold,
+    textTransform: "none",
+    background: "linear-gradient(to bottom, #FF6F48, #F02AA6)",
+    fontSize: theme.typography.body1.fontSize,
+    borderRadius: 28,
+    padding: theme.spacing(2, 4),
+  }),
 };
 
 export default styles;

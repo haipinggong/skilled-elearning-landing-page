@@ -3,10 +3,9 @@ import {
   CardContent,
   Typography,
   Card,
-  CardActions,
   Button,
 } from "@mui/material";
-
+import styles from "./Course.styles";
 export interface Props {
   img: string;
   title: string;
@@ -15,19 +14,17 @@ export interface Props {
 
 export const Course = ({ img, title, description }: Props) => {
   return (
-    <Card>
-      <CardMedia component="img" height="140" image={img} alt={title} />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+    <Card sx={styles.card}>
+      <CardMedia component="img" image={img} alt={title} sx={styles.icon} />
+      <CardContent sx={styles.content}>
+        <Typography variant="h4" component="h3" sx={styles.title}>
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" sx={styles.description}>
           {description}
         </Typography>
+        <Button sx={styles.button}>Get Started</Button>
       </CardContent>
-      <CardActions>
-        <Button size="small">Get Started</Button>
-      </CardActions>
     </Card>
   );
 };

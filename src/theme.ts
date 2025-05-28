@@ -70,13 +70,13 @@ let theme = createTheme({
       main: "#666CA3",
       light: "#F0F1FF",
     },
-    // pink: {
-    //   main: "#F74780",
-    //   light: "#FFA7C3",
-    // },
-    // grey: {
-    //   500: "#83869A",
-    // },
+    pink: {
+      main: "#F74780",
+      light: "#FFA7C3",
+    },
+    grey: {
+      500: "#83869A",
+    },
     // orange: {
     //   main: "#FF6F48",
     //   dark: "#F02AA6",
@@ -143,10 +143,13 @@ theme = createTheme(theme, {
   // },
   typography: {
     h1: {
-      fontSize: "3.5rem",
+      fontSize: "2.5rem",
       fontWeight: theme.typography.fontWeightExtraBold,
       lineHeight: 1.2,
       letterSpacing: 0,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: "3.5rem",
+      },
     },
     h2: {
       fontSize: "2.5rem",
@@ -161,10 +164,13 @@ theme = createTheme(theme, {
       letterSpacing: 0,
     },
     h4: {
-      fontSize: "1.5rem",
+      fontSize: "1.25rem",
       fontWeight: theme.typography.fontWeightExtraBold,
       lineHeight: 1.2,
       letterSpacing: 0,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: "1.5rem",
+      },
     },
     body1: {
       fontSize: "1.125rem",
