@@ -1,5 +1,7 @@
 import { Box, Grid, Typography, Card, CardContent } from "@mui/material";
 import styles from "./ContentSection.styles";
+import Course from "../Course/Course";
+import courses from "../../data/courses.json";
 
 export const ContentSection = () => {
   return (
@@ -14,11 +16,16 @@ export const ContentSection = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>Item 2</Grid>
-        <Grid size={{ xs: 12, md: 6 }}>Item 3</Grid>
-        <Grid size={{ xs: 12, md: 6 }}>Item 4</Grid>
-        <Grid size={{ xs: 12, md: 6 }}>Item 5</Grid>
-        <Grid size={{ xs: 12, md: 6 }}>Item 6</Grid>
+        {courses.map((course) => (
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Course
+              key={course.id}
+              img={course.img}
+              title={course.title}
+              description={course.description}
+            />
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );

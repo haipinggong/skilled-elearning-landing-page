@@ -3,7 +3,7 @@ import styles from "./App.styles";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 import { ContentSection } from "./components/ContentSection/ContentSection";
-
+import { Footer } from "./components/Footer/Footer";
 function App() {
   return (
     <Box sx={styles.wrapper}>
@@ -12,6 +12,7 @@ function App() {
         <Hero />
         <ContentSection />
       </Box>
+      <Footer />
     </Box>
   );
 }
