@@ -19,6 +19,11 @@ export const styles: StyleProps = {
     gap: 5,
     alignItems: "start",
   },
+  text: {
+    gap: 3,
+    display: "flex",
+    flexDirection: "column",
+  },
   description: (theme) => ({
     color: theme.palette.grey[500],
   }),

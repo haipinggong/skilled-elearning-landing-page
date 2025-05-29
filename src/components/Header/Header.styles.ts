@@ -5,9 +5,10 @@ interface StyleProps {
 }
 
 export const styles: StyleProps = {
-  appBar: {
-    backgroundColor: "white",
-  },
+  appBar: (theme) => ({
+    backgroundColor: theme.palette.background.default,
+    boxShadow: "none",
+  }),
   toolbar: (theme) => ({
     padding: theme.spacing(2, 2.5),
     justifyContent: "space-between",

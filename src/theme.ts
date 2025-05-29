@@ -104,18 +104,6 @@ theme = createTheme(theme, {
     background: {
       default: theme.palette.common.white,
     },
-    // gradientPink: {
-    //   main: `linear-gradient(to bottom, ${theme.palette.orange.main}, ${theme.palette.orange.dark})`,
-    //   light: `linear-gradient(to bottom, ${theme.palette.orange.main}, ${
-    //     theme.palette.orange.dark
-    //   }), ${alpha(theme.palette.common.white, 0.5)}`,
-    // },
-    // gradientPurple: {
-    //   main: `linear-gradient(to bottom, ${theme.palette.purple.main}, ${theme.palette.purple.light})`,
-    //   light: `linear-gradient(to bottom, ${theme.palette.purple.main}, ${
-    //     theme.palette.purple.light
-    //   }), ${alpha(theme.palette.common.white, 0.5)}`,
-    // },
   },
   // components: {
   //   MuiButton: {

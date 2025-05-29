@@ -8,6 +8,7 @@ export const styles: StyleProps = {
   card: {
     display: "flex",
     flexDirection: "column",
+    borderRadius: 3.75,
   },
   icon: (theme) => ({
     height: "56px",
