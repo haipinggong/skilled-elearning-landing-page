@@ -17,6 +17,9 @@ export const styles: StyleProps = {
       gap: theme.spacing(3),
       margin: theme.spacing(8, 5.5),
     },
+    [theme.breakpoints.up("md")]: {
+      margin: theme.spacing(8, 10),
+    },
   }),
   content: {
     display: "flex",
@@ -24,6 +27,7 @@ export const styles: StyleProps = {
     padding: 0,
     gap: 5,
     alignItems: "start",
+    position: "relative",
   },
   text: {
     gap: 3,
@@ -42,8 +46,10 @@ export const styles: StyleProps = {
     padding: theme.spacing(2, 4),
   }),
   image: (theme) => ({
+    position: "relative",
     [theme.breakpoints.up("sm")]: {
       height: "25rem",
+      transform: "translate(30%, -30%)",
     },
     [theme.breakpoints.up("md")]: {
       height: "35rem",

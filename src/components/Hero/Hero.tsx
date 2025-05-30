@@ -32,7 +32,12 @@ export const Hero = () => {
           Get Started
         </Button>
       </Box>
-      <Box component="img" src={image} alt="Hero" sx={styles.image} />
+      <Box
+        component="img"
+        src={image}
+        alt="A lady drinking a cup of tea"
+        sx={styles.image}
+      />
     </Box>
   );
 };

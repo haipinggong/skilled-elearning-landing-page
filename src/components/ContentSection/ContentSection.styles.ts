@@ -9,9 +9,13 @@ export const styles: StyleProps = {
     display: "flex",
     flexDirection: "column",
     gap: 1,
+    background: `linear-gradient(to bottom, ${theme.palette.common.white}, #F0F1FF)`,
     padding: theme.spacing(8, 2.5, 10, 2.5),
     [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(8, 5.5, 18, 5.5),
+    },
+    [theme.breakpoints.up("md")]: {
+      padding: theme.spacing(8, 10, 18, 10),
     },
   }),
   checkoutCard: (theme) => ({

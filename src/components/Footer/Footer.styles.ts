@@ -12,6 +12,12 @@ export const styles: StyleProps = {
     justifyContent: "space-between",
     width: "100%",
     alignItems: "center",
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(3, 5.5),
+    },
+    [theme.breakpoints.up("md")]: {
+      padding: theme.spacing(3, 10),
+    },
   }),
   button: (theme) => ({
     borderRadius: 25,

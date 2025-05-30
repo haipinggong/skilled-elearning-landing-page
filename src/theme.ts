@@ -77,14 +77,6 @@ let theme = createTheme({
     grey: {
       500: "#83869A",
     },
-    // orange: {
-    //   main: "#FF6F48",
-    //   dark: "#F02AA6",
-    // },
-    // purple: {
-    //   main: "#4851FF",
-    //   light: "#F02AA6",
-    // },
   },
   typography: {
     fontFamily: "Plus Jakarta Sans, sans-serif",
