@@ -35,12 +35,14 @@ export const styles: StyleProps = {
     flexDirection: "column",
     alignItems: "start",
     gap: theme.spacing(3),
+    flex: 1,
   }),
   title: (theme) => ({
     fontWeight: theme.typography.fontWeightBold,
   }),
   description: (theme) => ({
     color: theme.palette.grey[500],
+    flex: 1,
   }),
   button: (theme) => ({
     color: theme.palette.pink.main,
