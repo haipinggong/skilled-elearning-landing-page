@@ -10,12 +10,15 @@ export const styles: StyleProps = {
     // flexDirection: "column",
     borderRadius: 3.75,
     minHeight: "100%",
+    display: "flex",
+    flexDirection: "column",
     // position: "relative",
   },
   icon: (theme) => ({
     height: "56px",
     width: "56px",
     marginLeft: theme.spacing(4),
+
     // position: "absolute",
     // transform: "translateY(-70%)",
     // overflow: "clip",
@@ -27,7 +30,7 @@ export const styles: StyleProps = {
   }),
   content: (theme) => ({
     padding: theme.spacing(8, 4, 5, 4),
-    marginTop: theme.spacing(-3.5),
+    // marginTop: theme.spacing(-3.5),
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
