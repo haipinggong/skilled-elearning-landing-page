@@ -21,6 +21,7 @@ createRoot(rootElement).render(
         styles={{
           body: {
             backgroundColor: theme.palette.background.default,
+            maxWidth: "90rem",
           },
         }}
       />

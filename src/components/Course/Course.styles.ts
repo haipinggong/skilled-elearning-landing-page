@@ -6,14 +6,23 @@ interface StyleProps {
 
 export const styles: StyleProps = {
   card: {
-    display: "flex",
-    flexDirection: "column",
+    // display: "flex",
+    // flexDirection: "column",
     borderRadius: 3.75,
+    minHeight: "100%",
+    // position: "relative",
   },
   icon: (theme) => ({
     height: "56px",
     width: "56px",
     marginLeft: theme.spacing(4),
+    // position: "absolute",
+    // transform: "translateY(-70%)",
+    // overflow: "clip",
+    // transform: "translate(50%, -50%)",
+    // left: 0,
+    // top: theme.spacing(-2),
+    // zIndex: 1000,
     // objectFit: "cover",
   }),
   content: (theme) => ({

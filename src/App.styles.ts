@@ -5,13 +5,6 @@ interface StyleProps {
 }
 
 export const styles: StyleProps = {
-  wrapper: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    maxWidth: "23.4375rem",
-  },
   main: {
     display: "flex",
     flexDirection: "column",

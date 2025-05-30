@@ -7,14 +7,14 @@ import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
-    <Box sx={styles.wrapper}>
+    <>
       <Header />
       <Box component="main" sx={styles.main}>
         <Hero />
         <ContentSection />
       </Box>
       <Footer />
-    </Box>
+    </>
   );
 }
 

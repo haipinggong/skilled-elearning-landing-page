@@ -11,6 +11,12 @@ export const styles: StyleProps = {
     padding: 0,
     gap: 6,
     margin: theme.spacing(8, 2.5),
+    [theme.breakpoints.up("sm")]: {
+      display: "flex",
+      flexDirection: "row",
+      gap: theme.spacing(3),
+      margin: theme.spacing(8, 5.5),
+    },
   }),
   content: {
     display: "flex",
