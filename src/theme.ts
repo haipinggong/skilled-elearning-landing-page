@@ -55,15 +55,15 @@ declare module "@mui/material/Button" {
 }
 
 let theme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 375,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-    },
-  },
+  // breakpoints: {
+  //   values: {
+  //     xs: 0,
+  //     sm: 375,
+  //     md: 768,
+  //     lg: 1024,
+  //     xl: 1280,
+  //   },
+  // },
   palette: {
     blue: {
       dark: "#13183F",

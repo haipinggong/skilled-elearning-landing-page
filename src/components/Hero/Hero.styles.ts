@@ -41,6 +41,14 @@ export const styles: StyleProps = {
     borderRadius: 28,
     padding: theme.spacing(2, 4),
   }),
+  image: (theme) => ({
+    [theme.breakpoints.up("sm")]: {
+      height: "25rem",
+    },
+    [theme.breakpoints.up("md")]: {
+      height: "35rem",
+    },
+  }),
 };
 
 export default styles;

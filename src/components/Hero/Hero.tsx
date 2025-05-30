@@ -2,8 +2,22 @@ import Box from "@mui/material/Box";
 import styles from "./Hero.styles";
 import { Typography, Button } from "@mui/material";
 import imageHeroMobile from "../../assets/image-hero-mobile.png";
+import imageHeroTablet from "../../assets/image-hero-tablet.png";
+import imageHeroDesktop from "../../assets/image-hero-desktop.png";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 export const Hero = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
+
+  const image = isMobile
+    ? imageHeroMobile
+    : isTablet
+    ? imageHeroTablet
+    : imageHeroDesktop;
+
   return (
     <Box component="section" sx={styles.contentWrapper}>
       <Box sx={styles.content}>
@@ -18,7 +32,7 @@ export const Hero = () => {
           Get Started
         </Button>
       </Box>
-      <Box component="img" src={imageHeroMobile} alt="Hero" />
+      <Box component="img" src={image} alt="Hero" sx={styles.image} />
     </Box>
   );
 };

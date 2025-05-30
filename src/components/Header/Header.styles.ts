@@ -12,6 +12,9 @@ export const styles: StyleProps = {
   toolbar: (theme) => ({
     padding: theme.spacing(2, 2.5),
     justifyContent: "space-between",
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(3, 5.5),
+    },
   }),
   button: (theme) => ({
     borderRadius: 28,
