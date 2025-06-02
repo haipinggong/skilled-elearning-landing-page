@@ -1,4 +1,4 @@
-import type { SxProps, Theme } from "@mui/material";
+import { alpha, type SxProps, type Theme } from "@mui/material";
 
 interface StyleProps {
   [key: string]: SxProps<Theme>;
@@ -26,6 +26,21 @@ export const styles: StyleProps = {
     background: "linear-gradient(to bottom, #4851FF, #F02AA6)",
     textTransform: "none",
     typography: "body1",
+    position: "relative",
+    zIndex: 0,
+    "&::after": {
+      content: "''",
+      position: "absolute",
+      backgroundColor: alpha(theme.palette.common.white, 0.5),
+      zIndex: 1,
+      borderRadius: 25,
+      inset: 0,
+      opacity: 0,
+      transition: "opacity 0.3s ease",
+    },
+    "&:hover::after": {
+      opacity: 0.5,
+    },
   }),
 };
 

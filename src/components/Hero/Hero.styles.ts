@@ -1,4 +1,5 @@
 import type { SxProps, Theme } from "@mui/material";
+import { alpha } from "@mui/material/styles";
 
 interface StyleProps {
   [key: string]: SxProps<Theme>;
@@ -44,15 +45,29 @@ export const styles: StyleProps = {
     fontSize: theme.typography.body1.fontSize,
     borderRadius: 28,
     padding: theme.spacing(2, 4),
+    "&::after": {
+      content: "''",
+      position: "absolute",
+      backgroundColor: alpha(theme.palette.common.white, 0.5),
+      zIndex: 1,
+      borderRadius: 25,
+      inset: 0,
+      opacity: 0,
+      transition: "opacity 0.3s ease",
+    },
+    "&:hover::after": {
+      opacity: 0.5,
+    },
   }),
   image: (theme) => ({
     position: "relative",
     [theme.breakpoints.up("sm")]: {
       height: "25rem",
-      transform: "translate(40%, -30%)",
+      transform: "translate(1rem, -10%)",
     },
     [theme.breakpoints.up("md")]: {
       height: "35rem",
+      transform: "translate(1rem, -10%)",
     },
   }),
 };

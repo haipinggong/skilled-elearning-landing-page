@@ -26,6 +26,9 @@ export const styles: StyleProps = {
     backgroundColor: theme.palette.blue.dark,
     textTransform: "none",
     typography: "body1",
+    "&:hover": {
+      backgroundColor: theme.palette.blue.main,
+    },
   }),
 };
 
