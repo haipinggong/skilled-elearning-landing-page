@@ -15,7 +15,7 @@ export interface Props {
 export const Course = ({ img, title, description }: Props) => {
   return (
     <Card sx={styles.card}>
-      <CardMedia component="img" image={img} alt={title} sx={styles.icon} />
+      <CardMedia component="img" src={img} alt={title} sx={styles.icon} />
       <CardContent sx={styles.content}>
         <Typography variant="h4" component="h3" sx={styles.title}>
           {title}
