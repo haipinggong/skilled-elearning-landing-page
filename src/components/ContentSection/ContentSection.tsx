@@ -6,8 +6,8 @@ import courses from "../../data/courses.json";
 export const ContentSection = () => {
   return (
     <Box component="section" sx={styles.wrapper}>
-      <Grid container spacing={4}>
-        <Grid size={{ sm: 12, md: 6, lg: 4 }}>
+      <Grid container rowSpacing={7.5} columnSpacing={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <Card sx={styles.checkoutCard}>
             <CardContent sx={styles.checkoutCardContent}>
               <Typography variant="h4" component="h2">
@@ -17,7 +17,7 @@ export const ContentSection = () => {
           </Card>
         </Grid>
         {courses.map((course) => (
-          <Grid size={{ sm: 12, md: 6, lg: 4 }}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Course
               key={course.id}
               img={course.img}

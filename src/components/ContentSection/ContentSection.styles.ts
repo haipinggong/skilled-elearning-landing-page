@@ -11,6 +11,8 @@ export const styles: StyleProps = {
     gap: 1,
     background: `linear-gradient(to bottom, ${theme.palette.common.white}, #F0F1FF)`,
     padding: theme.spacing(8, 2.5, 10, 2.5),
+    position: "relative",
+    zIndex: 0,
     [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(8, 5.5, 18, 5.5),
     },

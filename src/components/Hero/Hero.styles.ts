@@ -49,7 +49,7 @@ export const styles: StyleProps = {
     position: "relative",
     [theme.breakpoints.up("sm")]: {
       height: "25rem",
-      transform: "translate(30%, -30%)",
+      transform: "translate(40%, -30%)",
     },
     [theme.breakpoints.up("md")]: {
       height: "35rem",
