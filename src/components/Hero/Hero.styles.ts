@@ -12,9 +12,11 @@ export const styles: StyleProps = {
     padding: 0,
     gap: 6,
     margin: theme.spacing(8, 2.5),
+    // position: "relative",
+    overflow: "visible",
     [theme.breakpoints.up("sm")]: {
-      display: "flex",
-      flexDirection: "row",
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
       gap: theme.spacing(3),
       margin: theme.spacing(8, 5.5),
     },
@@ -28,7 +30,7 @@ export const styles: StyleProps = {
     padding: 0,
     gap: 5,
     alignItems: "start",
-    position: "relative",
+    zIndex: 2,
   },
   text: {
     gap: 3,
@@ -59,15 +61,29 @@ export const styles: StyleProps = {
       opacity: 0.5,
     },
   }),
-  image: (theme) => ({
+  imageWrapper: {
     position: "relative",
+    zIndex: 1,
+  },
+  image: (theme) => ({
+    height: "auto",
+    width: "100%",
+    objectFit: "contain",
     [theme.breakpoints.up("sm")]: {
-      height: "25rem",
-      transform: "translate(1rem, -10%)",
+      position: "absolute",
+      height: "28rem",
+      width: "28rem",
+      maxWidth: "none",
     },
     [theme.breakpoints.up("md")]: {
-      height: "35rem",
-      transform: "translate(1rem, -10%)",
+      height: "auto",
+      width: "100%",
+      right: 0,
+      top: "50%",
+      transform: "translateY(-50%)",
+      zIndex: 2,
+      maxWidth: "100%",
+      maxHeight: "35rem",
     },
   }),
 };

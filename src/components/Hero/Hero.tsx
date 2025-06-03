@@ -3,7 +3,7 @@ import styles from "./Hero.styles";
 import { Typography, Button } from "@mui/material";
 import imageHeroMobile from "../../assets/image-hero-mobile.png";
 import imageHeroTablet from "../../assets/image-hero-tablet.png";
-import imageHeroDesktop from "../../assets/image-hero-desktop.png";
+import imageHeroDesktop from "../../assets/image-hero-desktop@2x.png";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 
@@ -32,12 +32,14 @@ export const Hero = () => {
           Get Started
         </Button>
       </Box>
-      <Box
-        component="img"
-        src={image}
-        alt="A lady drinking a cup of tea"
-        sx={styles.image}
-      />
+      <Box sx={styles.imageWrapper}>
+        <Box
+          component="img"
+          src={image}
+          alt="A lady drinking a cup of tea"
+          sx={styles.image}
+        />
+      </Box>
     </Box>
   );
 };
